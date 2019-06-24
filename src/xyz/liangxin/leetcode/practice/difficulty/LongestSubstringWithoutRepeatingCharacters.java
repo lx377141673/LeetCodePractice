@@ -1,10 +1,9 @@
-package xyz.liangxin.leetCode.practice.difficulty;
+package xyz.liangxin.leetcode.practice.difficulty;
 
 import java.util.HashSet;
-import java.util.Set;
 
 /**
- * 题目: 无重复字符的最长子串
+ * 题目: 3. 无重复字符的最长子串
  * 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
  * 示例 1:
  * <p>
@@ -128,10 +127,12 @@ public class LongestSubstringWithoutRepeatingCharacters {
         int idx =0 ,i=0 ,max = 0;
         for(;i<cs.length;i++){
             max = Math.max(max,i-idx);
-            if(rec[cs[i]])
-                while(cs[idx++]!=cs[i])
-                    rec[cs[idx-1]]=false;
-            rec[cs[i]] = true;
+            if(rec[cs[i]]) {
+                while (cs[idx++] != cs[i]) {
+                    rec[cs[idx - 1]] = false;
+                }
+                rec[cs[i]] = true;
+            }
         }
         return Math.max(max,cs.length - idx);
     }
@@ -197,12 +198,12 @@ public class LongestSubstringWithoutRepeatingCharacters {
 
     public static int lengthOfLongestSubstring4(String s) {
         int n=s.length();
-        if(n<=1)    return n;
+        if(n<=1) {   return n;}
         int max=1;
         for(int i=0;i<n-1;i++){
             HashSet<Character> set=new HashSet<>();
             for(int j=i;j<n;j++){
-                if(!set.add(s.charAt(j)))    break;
+                if(!set.add(s.charAt(j))) {   break;}
                 max=Math.max(j-i+1,max);
             }
         }

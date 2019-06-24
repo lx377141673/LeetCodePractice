@@ -1,6 +1,4 @@
-package xyz.liangxin.leetCode.practice.simple;
-
-import java.util.Random;
+package xyz.liangxin.leetcode.practice.simple;
 
 /**
  * 题目:

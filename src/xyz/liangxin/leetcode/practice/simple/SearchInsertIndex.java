@@ -1,4 +1,4 @@
-package xyz.liangxin.leetCode.practice.simple;
+package xyz.liangxin.leetcode.practice.simple;
 
 
 /**

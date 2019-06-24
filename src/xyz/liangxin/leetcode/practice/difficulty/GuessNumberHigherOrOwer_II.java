@@ -1,4 +1,4 @@
-package xyz.liangxin.leetCode.practice.difficulty;
+package xyz.liangxin.leetcode.practice.difficulty;
 
 
 
@@ -141,7 +141,7 @@ public class GuessNumberHigherOrOwer_II {
         if (n == 1) {
             return 0;
         }
-        int dp[][] = new int[n+1][n+1];
+        int[][] dp = new int[n+1][n+1];
 
         for(int l = 1 ; l <= n ; l++){
 
